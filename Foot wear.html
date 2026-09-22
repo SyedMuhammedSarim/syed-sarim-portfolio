@@ -1,0 +1,1441 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HUGO Footwear | Official Style Collection</title>
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f7f7;
+            color: #111;
+            line-height: 1.6;
+        }
+
+        section {
+            padding: 70px 7%;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: #ffffff;
+            color: #111111;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 16px 7%;
+
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: #111;
+        }
+
+        .logo span {
+            color: #111;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        nav ul li a {
+            color: #222;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+
+            transition: 0.2s ease;
+        }
+
+        nav ul li a:hover {
+            color: #777;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 78vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 60px 7%;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.58),
+                    rgba(0,0,0,0.58)
+                ),
+                url("https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1600&q=85")
+                center/cover;
+        }
+
+        .hero-content {
+            max-width: 650px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1;
+            letter-spacing: -2px;
+            margin-bottom: 22px;
+            font-weight: 700;
+        }
+
+        .hero h1 span {
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 17px;
+            max-width: 560px;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .btn {
+            display: inline-block;
+
+            padding: 12px 24px;
+
+            background: #111111;
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            letter-spacing: 0.5px;
+
+            border-radius: 2px;
+
+            transition: 0.2s ease;
+        }
+
+        .btn:hover {
+            background: #333333;
+            transform: none;
+        }
+
+        .hero .btn {
+            background: #ffffff;
+            color: #111111;
+        }
+
+        .hero .btn:hover {
+            background: #dddddd;
+        }
+
+
+        /* =========================
+           SECTION TITLE
+        ========================= */
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 650px;
+            margin: auto;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           PRODUCTS
+        ========================= */
+
+        .products {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 24px;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: #ffffff;
+
+            border: 1px solid #e5e5e5;
+
+            border-radius: 4px;
+
+            overflow: hidden;
+
+            transition: 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .product-card img {
+            width: 100%;
+
+            height: 180px;
+
+            object-fit: cover;
+
+            object-position: center;
+
+            display: block;
+        }
+
+        .product-info {
+            padding: 18px;
+        }
+
+        .product-info h3 {
+            font-size: 18px;
+
+            font-weight: 600;
+
+            margin-bottom: 7px;
+
+            color: #171717;
+        }
+
+        .product-info p {
+            font-size: 14px;
+
+            color: #666;
+
+            line-height: 1.5;
+
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-size: 16px;
+
+            font-weight: 600;
+
+            color: #111;
+        }
+
+
+        /* =========================
+           WHY HUGO
+        ========================= */
+
+        .why {
+            background: #111111;
+
+            color: white;
+        }
+
+        .why .section-title p {
+            color: #bbbbbb;
+        }
+
+        .features {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 24px;
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+        .feature {
+            padding: 28px;
+
+            background: #181818;
+
+            border: 1px solid #333;
+
+            border-radius: 4px;
+        }
+
+        .feature-icon {
+            font-size: 27px;
+
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            font-size: 19px;
+
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #bbb;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 55px;
+
+            align-items: center;
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+        .about img {
+            width: 100%;
+
+            height: 420px;
+
+            object-fit: cover;
+
+            border-radius: 4px;
+        }
+
+        .about-text h2 {
+            font-size: 40px;
+
+            font-weight: 600;
+
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #555;
+
+            margin-bottom: 18px;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #eeeeee;
+        }
+
+        .contact-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+        .contact-box {
+            background: white;
+
+            padding: 28px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 4px;
+        }
+
+        .contact-box h3 {
+            font-size: 19px;
+
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: #555;
+
+            font-size: 14px;
+        }
+
+        .contact-box strong {
+            color: #111;
+        }
+
+
+        /* =========================
+           NEWSLETTER
+        ========================= */
+
+        .newsletter {
+            background: #222;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 34px;
+
+            font-weight: 600;
+
+            margin-bottom: 10px;
+        }
+
+        .newsletter p {
+            color: #ccc;
+
+            margin-bottom: 25px;
+        }
+
+        .newsletter input {
+            padding: 13px;
+
+            width: min(380px, 80%);
+
+            border: none;
+
+            border-radius: 2px;
+
+            margin-right: 5px;
+        }
+
+        .newsletter button {
+            padding: 13px 23px;
+
+            border: none;
+
+            background: white;
+
+            color: #111;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            border-radius: 2px;
+        }
+
+        .newsletter button:hover {
+            background: #ddd;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #080808;
+
+            color: #999;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        .footer-logo {
+            font-size: 27px;
+
+            font-weight: 700;
+
+            letter-spacing: 4px;
+
+            color: white;
+
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            font-size: 13px;
+
+            margin: 5px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .products {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .features {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .contact-container {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 750px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 14px;
+
+                padding: 15px 4%;
+            }
+
+            nav ul {
+                gap: 15px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .products {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .product-card img {
+                height: 160px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .about img {
+                height: 300px;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .hero {
+                min-height: 70vh;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .product-card img {
+                height: 200px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter input {
+                width: 100%;
+
+                margin-bottom: 10px;
+            }
+
+            .newsletter button {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="logo">
+        HUGO
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#products">Collection</a>
+        </li>
+
+        <li>
+            <a href="#why">Why HUGO</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            STEP INTO<br>
+            <span>HUGO</span>
+        </h1>
+
+        <p>
+            Discover contemporary footwear designed for
+            modern lifestyles, combining distinctive style,
+            versatility and a confident aesthetic.
+        </p>
+
+        <a href="#products" class="btn">
+            VIEW COLLECTION
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section id="products">
+
+    <div class="section-title">
+
+        <h2>
+            Footwear Collection
+        </h2>
+
+        <p>
+            Discover a selection of contemporary HUGO footwear,
+            combining distinctive design with modern style
+            and versatility.
+        </p>
+
+    </div>
+
+
+    <div class="products">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80"
+                alt="HUGO Urban Sneaker"
+            >
+
+            <div class="product-info">
+
+                <h3>
+                    HUGO Urban
+                </h3>
+
+                <p>
+                    Modern everyday sneaker with
+                    a clean contemporary design.
+                </p>
+
+                <div class="price">
+                    $180
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80"
+                alt="HUGO Classic Sneaker"
+            >
+
+            <div class="product-info">
+
+                <h3>
+                    HUGO Classic
+                </h3>
+
+                <p>
+                    A simple and versatile sneaker
+                    for everyday outfits.
+                </p>
+
+                <div class="price">
+                    $195
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=80"
+                alt="HUGO Street Sneaker"
+            >
+
+            <div class="product-info">
+
+                <h3>
+                    HUGO Street
+                </h3>
+
+                <p>
+                    A contemporary sneaker inspired
+                    by modern street style.
+                </p>
+
+                <div class="price">
+                    $210
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=800&q=80"
+                alt="HUGO Sport Sneaker"
+            >
+
+            <div class="product-info">
+
+                <h3>
+                    HUGO Sport
+                </h3>
+
+                <p>
+                    Sport-inspired footwear with
+                    a modern silhouette.
+                </p>
+
+                <div class="price">
+                    $175
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 5 -->
+
+        <div class="product-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=800&q=80"
+                alt="HUGO Black Sneaker"
+            >
+
+            <div class="product-info">
+
+                <h3>
+                    HUGO Black
+                </h3>
+
+                <p>
+                    A refined dark design with
+                    a sophisticated appearance.
+                </p>
+
+                <div class="price">
+                    $220
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 6 -->
+
+        <div class="product-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=800&q=80"
+                alt="HUGO Motion Sneaker"
+            >
+
+            <div class="product-info">
+
+                <h3>
+                    HUGO Motion
+                </h3>
+
+                <p>
+                    Athletic-inspired footwear
+                    with a contemporary design.
+                </p>
+
+                <div class="price">
+                    $190
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 7 -->
+
+        <div class="product-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=800&q=80"
+                alt="HUGO Premium Footwear"
+            >
+
+            <div class="product-info">
+
+                <h3>
+                    HUGO Premium
+                </h3>
+
+                <p>
+                    A refined footwear style for
+                    smart-casual occasions.
+                </p>
+
+                <div class="price">
+                    $230
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 8 -->
+
+        <div class="product-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=800&q=80"
+                alt="HUGO Canvas Sneaker"
+            >
+
+            <div class="product-info">
+
+                <h3>
+                    HUGO Canvas
+                </h3>
+
+                <p>
+                    A relaxed sneaker suitable
+                    for everyday casual wear.
+                </p>
+
+                <div class="price">
+                    $165
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 9 -->
+
+        <div class="product-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=800&q=80"
+                alt="HUGO Designer Sneaker"
+            >
+
+            <div class="product-info">
+
+                <h3>
+                    HUGO Designer
+                </h3>
+
+                <p>
+                    A distinctive fashion-forward
+                    footwear design.
+                </p>
+
+                <div class="price">
+                    $240
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 10 -->
+
+        <div class="product-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1543508282-6319a3e2621f?auto=format&fit=crop&w=800&q=80"
+                alt="HUGO Signature Sneaker"
+            >
+
+            <div class="product-info">
+
+                <h3>
+                    HUGO Signature
+                </h3>
+
+                <p>
+                    A premium-inspired style for
+                    a modern wardrobe.
+                </p>
+
+                <div class="price">
+                    $275
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 11 -->
+
+        <div class="product-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1554130840-1b2d0f2a9a3b?auto=format&fit=crop&w=800&q=80"
+                alt="HUGO Fashion Shoe"
+            >
+
+            <div class="product-info">
+
+                <h3>
+                    HUGO Fashion
+                </h3>
+
+                <p>
+                    Contemporary footwear with
+                    a distinctive fashion profile.
+                </p>
+
+                <div class="price">
+                    $250
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 12 -->
+
+        <div class="product-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=800&q=80"
+                alt="HUGO Essential Sneaker"
+            >
+
+            <div class="product-info">
+
+                <h3>
+                    HUGO Essential
+                </h3>
+
+                <p>
+                    A versatile footwear option
+                    for everyday styling.
+                </p>
+
+                <div class="price">
+                    $185
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY HUGO
+========================= -->
+
+<section class="why" id="why">
+
+    <div class="section-title">
+
+        <h2>
+            Why Choose HUGO?
+        </h2>
+
+        <p>
+            HUGO combines contemporary fashion,
+            distinctive design and versatile footwear
+            for modern consumers.
+        </p>
+
+    </div>
+
+
+    <div class="features">
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ★
+            </div>
+
+            <h3>
+                Contemporary Design
+            </h3>
+
+            <p>
+                HUGO focuses on modern designs and
+                distinctive fashion aesthetics.
+            </p>
+
+        </div>
+
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ✓
+            </div>
+
+            <h3>
+                Quality Focus
+            </h3>
+
+            <p>
+                The HUGO BOSS group emphasizes quality,
+                innovation and responsible business practices.
+            </p>
+
+        </div>
+
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ◆
+            </div>
+
+            <h3>
+                Versatile Styles
+            </h3>
+
+            <p>
+                The footwear range includes sneakers,
+                boots, casual shoes, loafers and slides.
+            </p>
+
+        </div>
+
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ◎
+            </div>
+
+            <h3>
+                Global Brand
+            </h3>
+
+            <p>
+                HUGO is part of the internationally
+                recognized HUGO BOSS fashion group.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="about">
+
+        <img
+            src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=1000&q=85"
+            alt="Fashion footwear"
+        >
+
+
+        <div class="about-text">
+
+            <h2>
+                More Than Footwear
+            </h2>
+
+            <p>
+                HUGO is one of the two brands of HUGO BOSS.
+                The brand focuses on contemporary fashion
+                and is designed for customers who value
+                individual style.
+            </p>
+
+            <p>
+                Its footwear collection includes modern
+                sneakers and other styles suitable for
+                different occasions and personal tastes.
+            </p>
+
+            <a
+                href="https://www.hugoboss.com/"
+                class="btn"
+                target="_blank"
+            >
+                OFFICIAL WEBSITE
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+    <div class="section-title">
+
+        <h2>
+            Contact & Locations
+        </h2>
+
+        <p>
+            Business and customer-service information.
+        </p>
+
+    </div>
+
+
+    <div class="contact-container">
+
+
+        <!-- HEADQUARTERS -->
+
+        <div class="contact-box">
+
+            <h3>
+                HUGO BOSS Headquarters
+            </h3>
+
+            <p>
+
+                <strong>
+                    Address:
+                </strong>
+                <br>
+
+                Holy-Allee 3
+                <br>
+
+                72555 Metzingen
+                <br>
+
+                Germany
+
+            </p>
+
+            <br>
+
+            <p>
+
+                <strong>
+                    Phone:
+                </strong>
+                <br>
+
+                +49 7123 94-0
+
+            </p>
+
+        </div>
+
+
+
+        <!-- PAKISTAN -->
+
+        <div class="contact-box">
+
+            <h3>
+                HUGO BOSS Store — Islamabad
+            </h3>
+
+            <p>
+
+                <strong>
+                    Location:
+                </strong>
+                <br>
+
+                Centaurus Mall, First Floor
+                <br>
+
+                Islamabad, Pakistan
+
+            </p>
+
+            <br>
+
+            <p>
+
+                <strong>
+                    Phone:
+                </strong>
+                <br>
+
+                +92 51 2701730
+
+            </p>
+
+        </div>
+
+
+
+        <!-- ONLINE -->
+
+        <div class="contact-box">
+
+            <h3>
+                Online Customer Service
+            </h3>
+
+            <p>
+                For online orders, product questions,
+                returns and customer-service information,
+                visit the official HUGO BOSS website.
+            </p>
+
+            <br>
+
+            <a
+                href="https://www.hugoboss.com/"
+                class="btn"
+                target="_blank"
+            >
+                VISIT WEBSITE
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     NEWSLETTER
+========================= -->
+
+<section class="newsletter">
+
+    <h2>
+        Stay Informed
+    </h2>
+
+    <p>
+        Subscribe for fashion news and footwear updates.
+    </p>
+
+
+    <form onsubmit="subscribe(event)">
+
+        <input
+            type="email"
+            placeholder="Enter your email address"
+            required
+        >
+
+        <button type="submit">
+            SUBSCRIBE
+        </button>
+
+    </form>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        HUGO
+    </div>
+
+    <p>
+        © 2026 HUGO Footwear Concept Website
+    </p>
+
+    <p>
+        This is a student/demo website and is not
+        an official HUGO BOSS website.
+    </p>
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    function subscribe(event) {
+
+        event.preventDefault();
+
+        alert(
+            "Thank you for subscribing to HUGO Footwear."
+        );
+
+    }
+
+</script>
+
+
+</body>
+</html>
+
